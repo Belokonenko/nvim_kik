@@ -1,5 +1,5 @@
-require 'core.options' -- Load general options
-require 'core.keymaps' -- Load general keymaps
+require 'core.options'  -- Load general options
+require 'core.keymaps'  -- Load general keymaps
 require 'core.snippets' -- Custom code snippets
 
 -- Set up the Lazy plugin manager
@@ -23,7 +23,7 @@ require('lazy').setup {
   require 'plugins.telescope',
   require 'plugins.lsp',
   require 'plugins.autocompletion',
-  require 'plugins.none-ls',
+
   require 'plugins.gitsigns',
   require 'plugins.alpha',
   require 'plugins.indent-blankline',
@@ -149,5 +149,5 @@ vim.api.nvim_create_user_command('GenerateCSS', GenerateCssClasses, {})
 vim.api.nvim_create_user_command('GenerateSCSS', GenerateScssClasses, {})
 
 -- Назначаем хоткеи
-vim.keymap.set('n', '<C-M-c>', ':GenerateCSS<CR>', { noremap = true, silent = true }) -- Ctrl + Alt + C → CSS
+vim.keymap.set('n', '<C-M-c>', ':GenerateCSS<CR>', { noremap = true, silent = true })  -- Ctrl + Alt + C → CSS
 vim.keymap.set('n', '<C-M-s>', ':GenerateSCSS<CR>', { noremap = true, silent = true }) -- Ctrl + Alt + S → SCSS

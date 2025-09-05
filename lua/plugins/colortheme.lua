@@ -39,7 +39,7 @@ return {
   --   -- You can configure highlights by doing something like:
   --   vim.cmd.hi 'Comment gui=none'
   -- end,
-  --
+
 
   -- *** --
 
@@ -76,23 +76,23 @@ return {
 
   -- *** --
 
-  'EdenEast/nightfox.nvim',
-  config = function()
-    require('nightfox').setup {
-      options = {
-        -- Пример дополнительных настроек
-        styles = {
-          comments = 'italic',
-          keywords = 'bold',
-          functions = 'italic,bold',
-        },
-      },
-    }
-    vim.cmd 'colorscheme carbonfox'
-  end,
+  -- 'EdenEast/nightfox.nvim',
+  -- config = function()
+  --   require('nightfox').setup {
+  --     options = {
+  --       -- Пример дополнительных настроек
+  --       styles = {
+  --         comments = 'italic',
+  --         keywords = 'bold',
+  --         functions = 'italic,bold',
+  --       },
+  --     },
+  --   }
+  --   vim.cmd 'colorscheme carbonfox'
+  -- end,
 
   -- *** --
-
+  --
   -- 'EdenEast/nightfox.nvim',
   -- config = function()
   --   require('nightfox').setup {
@@ -109,4 +109,36 @@ return {
   -- end,
 
   -- *** --
+  --
+  -- "catppuccin/nvim",
+  -- name = "catppuccin",
+  -- priority = 1000, -- чтобы тема грузилась первой
+  -- config = function()
+  --   require("catppuccin").setup({
+  --     flavour = "latte", -- latte = светлая, frappe/maccchiato/mocha = тёмные
+  --     transparent_background = false,
+  --     integrations = {
+  --       cmp = true,
+  --       treesitter = true,
+  --       mason = true,
+  --       nvimtree = true,
+  --       native_lsp = {
+  --         enabled = true,
+  --         virtual_text = {
+  --           errors = { "italic" },
+  --           hints = { "italic" },
+  --           warnings = { "italic" },
+  --           information = { "italic" },
+  --         },
+  --         underlines = {
+  --           errors = { "underline" },
+  --           hints = { "underline" },
+  --           warnings = { "underline" },
+  --           information = { "underline" },
+  --         },
+  --       },
+  --     },
+  --   })
+  --   vim.cmd.colorscheme "catppuccin-mocha"
+  -- end,
 }
