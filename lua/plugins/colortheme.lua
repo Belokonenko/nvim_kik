@@ -141,9 +141,12 @@ return {
   --   })
   --   vim.cmd.colorscheme "catppuccin-mocha"
   -- end,
+
+
   "projekt0n/github-nvim-theme",
   config = function()
     require("github-theme").setup({ theme_style = "light" })
     vim.cmd("colorscheme github_light")
-  end
+  end,
+  --
 }
