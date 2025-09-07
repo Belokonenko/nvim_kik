@@ -143,10 +143,34 @@ return {
   -- end,
 
 
+  -- "projekt0n/github-nvim-theme",
+  -- config = function()
+  --   require("github-theme").setup({ theme_style = "light" })
+  --   vim.cmd("colorscheme github_light")
+  -- end,
+  --
   "projekt0n/github-nvim-theme",
+  name = "github-theme",
+  lazy = false,
+  priority = 1000,
   config = function()
-    require("github-theme").setup({ theme_style = "light" })
+    require("github-theme").setup({
+      options = {
+        transparent = false, -- фон белый
+      },
+    })
+
+    -- Установка светлой темы
     vim.cmd("colorscheme github_light")
   end,
-  --
+
+
+
+    -- github_dark
+    -- github_dark_default
+    -- github_dark_dimmed
+    -- github_light
+    -- github_light_default
+    -- github_light_colorblind
+
 }
